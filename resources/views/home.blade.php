@@ -51,8 +51,13 @@
             </div>
 
             <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-100 via-slate-50 to-emerald-50 shadow-xl shadow-slate-200/60">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Donasi makanan" class="h-full w-full object-cover object-center sm:min-h-[420px]" />
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/10 via-transparent to-slate-950/5"></div>
+
+            <img 
+                src="/images/berbagi.png"
+                alt="Donasi makanan"
+                 class="w-full max-w-3xl h-[500px] object-contain object-center rounded-[2rem]"
+            />
+
             </div>
         </div>
     </main>
