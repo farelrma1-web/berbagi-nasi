@@ -45,7 +45,7 @@ class DonationController extends Controller
 
     'image' => $imagePath,
 
-]);
+]); 
 
     return redirect('/admin/dashboard')
         ->with('success', 'Donasi berhasil ditambahkan');

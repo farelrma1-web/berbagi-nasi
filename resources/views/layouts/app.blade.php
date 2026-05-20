@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berbagi Nasi</title>
 
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-100">
 
@@ -21,9 +21,9 @@
 
             <div class="space-x-5">
 
-                <a href="/"
+                <a href="/admin/dashboard"
                    class="text-gray-700 hover:text-green-600">
-                    Home
+                    Kembali ke Dashboard
                 </a>
 
                 <a href="/donations"
@@ -32,6 +32,11 @@
                 </a>
 
                 @auth
+
+                    <a href="/profile"
+                       class="text-gray-700 hover:text-green-600">
+                        Profile
+                    </a>
 
                     <span class="text-gray-600">
                         Hi, {{ auth()->user()->name }}
@@ -70,8 +75,18 @@
     </nav>
 
     <!-- Content -->
-    <main>
-        @yield('content')
+    <main class="py-10">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @isset($header)
+                <div class="mb-6">
+                    {{ $header }}
+                </div>
+            @endisset
+
+            <div class="px-4 py-6 sm:px-0">
+                @yield('content')
+            </div>
+        </div>
     </main>
 
 </body>
